@@ -1,0 +1,137 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum TableStatus {
+  VACANT
+  OCCUPIED
+  RESERVED
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PREPARING
+  READY
+  COMPLETED
+  CANCELLED
+}
+
+enum OrderType {
+  DINE_IN
+  TAKEAWAY
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+}
+
+enum PaymentMethod {
+  CASH
+  CARD
+  UPI
+}
+
+enum ReservationStatus {
+  PENDING
+  CONFIRMED
+  SEATED
+  CANCELLED
+}
+
+model Table {
+  id           String        @id @default(cuid())
+  tableNumber  Int           @unique
+  capacity     Int           @default(4)
+  location     String        @default("Indoor Main Floor")
+  status       TableStatus   @default(VACANT)
+  qrCodeUrl    String?
+  orders       Order[]
+  reservations Reservation[]
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+}
+
+model Category {
+  id          String     @id @default(cuid())
+  name        String     @unique
+  slug        String     @unique
+  description String?
+  icon        String?
+  order       Int        @default(0)
+  items       MenuItem[]
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+}
+
+model MenuItem {
+  id          String      @id @default(cuid())
+  name        String
+  description String
+  price       Float
+  imageUrl    String
+  categoryId  String
+  category    Category    @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  isVeg       Boolean     @default(false)
+  isAvailable Boolean     @default(true)
+  spiciness   Int         @default(0)
+  prepTimeMin Int         @default(15)
+  orderItems  OrderItem[]
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+}
+
+model Order {
+  id            String        @id @default(cuid())
+  orderNumber   String        @unique
+  orderType     OrderType     @default(DINE_IN)
+  tableId       String?
+  table         Table?        @relation(fields: [tableId], references: [id], onDelete: SetNull)
+  customerName  String
+  customerPhone String?
+  customerEmail String?
+  notes         String?
+  status        OrderStatus   @default(PENDING)
+  totalAmount   Float
+  paymentStatus PaymentStatus @default(PENDING)
+  paymentMethod PaymentMethod @default(CARD)
+  items         OrderItem[]
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+
+model OrderItem {
+  id         String   @id @default(cuid())
+  orderId    String
+  order      Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  menuItemId String
+  menuItem   MenuItem @relation(fields: [menuItemId], references: [id], onDelete: Restrict)
+  quantity   Int      @default(1)
+  unitPrice  Float
+  notes      String?
+  createdAt  DateTime @default(now())
+}
+
+model Reservation {
+  id              String            @id @default(cuid())
+  guestName       String
+  guestEmail      String
+  guestPhone      String
+  partySize       Int
+  reservationDate DateTime
+  timeSlot        String
+  tableId         String?
+  table           Table?            @relation(fields: [tableId], references: [id], onDelete: SetNull)
+  specialRequests String?
+  status          ReservationStatus @default(CONFIRMED)
+  createdAt       DateTime          @default(now())
+  updatedAt       DateTime          @updatedAt
+}
+
