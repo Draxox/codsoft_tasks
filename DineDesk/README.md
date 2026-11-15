@@ -6,6 +6,21 @@
 
 ---
 
+## 🎥 Live Demo Video Walkthrough
+
+<!-- [![Watch on LinkedIn](https://img.shields.io/badge/LinkedIn-Watch%20Demo%20Video-0077b5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com) -->
+[![GitHub Repository](https://img.shields.io/badge/GitHub-codsoft__tasks-181717?style=for-the-badge&logo=github)](https://github.com/Draxox/codsoft_tasks)
+
+<div align="center">
+  <video src="./docs/demo.mp4" controls="controls" width="100%"></video>
+</div>
+
+> 📁 **Video file in repository**: [**View / Download `docs/demo.mp4`**](./docs/demo.mp4)
+
+> 💡 *A complete walkthrough showing the full operational lifecycle: Table QR scanning ➔ Category browsing & filtering ➔ Cart order submission ➔ Live Kitchen KDS board sync with audio chime ➔ Real-time customer stepper progression ➔ UPI receipt simulation ➔ Table floor reservation & printable QR standee generator.*
+
+---
+
 ## 🌟 Key Features
 
 ### 🧑‍💼 1. Customer Dining & Ordering Portal (`/menu`)
