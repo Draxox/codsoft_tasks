@@ -1,3 +1,5 @@
+
+
 # 🍽️ DineDesk — Modern Restaurant Ordering & Table Management Platform
 
 > Built for the **CodSoft Full Stack Web Development Internship** (Project 1 of 3)
@@ -12,7 +14,7 @@
 [![GitHub Repository](https://img.shields.io/badge/GitHub-codsoft__tasks-181717?style=for-the-badge&logo=github)](https://github.com/Draxox/codsoft_tasks)
 
 <div align="center">
-  <video src="./docs/demo.mp4" controls="controls" width="100%"></video>
+  <video src="https://github.com/user-attachments/assets/131473c5-fdc3-4dc6-a6fa-29c966a9312f" autoplay loop controls="controls" width="100%"></video>
 </div>
 
 > 📁 **Video file in repository**: [**View / Download `docs/demo.mp4`**](./docs/demo.mp4)
