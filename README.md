@@ -6,11 +6,11 @@ Repository containing all 3 projects completed for the **CodSoft Full Stack Web 
 
 ## 📋 Projects Overview
 
-| Task # | Project Name | Description | Tech Stack | Status |
-| :---: | :--- | :--- | :--- | :---: |
-| **01** | [**DineDesk**](./DineDesk) | Modern Restaurant Ordering, Contactless QR, Table Reservations & Real-Time Kitchen Display System (KDS) | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL, Prisma ORM | ✅ **Completed** |
-| **02** | [**EduManage**](./EduManage) | Student Information System & Academic ERP (Attendance, Grades & Fees) | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL, Prisma ORM | ✅ **Completed** |
-| **03** | *CareerHub (Job Portal)* | Modern Recruitment & Job Application Platform | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL | ⏳ **In Progress** |
+| Task # | Project Name | Description | Tech Stack | Demo Video | Status |
+| :---: | :--- | :--- | :--- | :---: | :---: |
+| **01** | [**DineDesk**](./DineDesk) | Modern Restaurant Ordering, Contactless QR, Table Reservations & Real-Time Kitchen Display System (KDS) | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL, Prisma ORM | [🎥 Walkthrough](./DineDesk/README.md#-live-demo-video-walkthrough) | ✅ **Completed** |
+| **02** | [**EduManage**](./EduManage) | Student Information System & Academic ERP (Attendance, Grades & Fees) | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL, Prisma ORM | [🎥 Walkthrough](./EduManage/README.md#-live-demo-video-walkthrough) | ✅ **Completed** |
+| **03** | *CareerHub (Job Portal)* | Modern Recruitment & Job Application Platform | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL | — | ⏳ **In Progress** |
 
 ---
 
@@ -27,6 +27,7 @@ Repository containing all 3 projects completed for the **CodSoft Full Stack Web 
 ---
 
 ## 🎓 Task 2: EduManage — Student Management System & ERP
+- **🎥 Live Video Walkthrough**: [View in EduManage README](./EduManage/README.md#-live-demo-video-walkthrough)
 - **Institutional Admin Operations**: Live academic KPI stats, student enrollment modal, searchable directory with Class and Fee filters.
 - **Faculty Attendance & Grading**: 1-click attendance roll call board (`Present`, `Late`, `Absent`) and examination score evaluation out of 100 with auto-calculated letter grades (`A+` to `D`).
 - **Student & Parent Academic Portal**: Official examination report card, term attendance progress bar with eligibility warnings, and simulated 1-click tuition fee online clearance with verified receipts.

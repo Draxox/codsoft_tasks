@@ -6,6 +6,20 @@
 
 ---
 
+## 🎥 Live Demo Video Walkthrough
+
+[![GitHub Repository](https://img.shields.io/badge/GitHub-codsoft__tasks-181717?style=for-the-badge&logo=github)](https://github.com/Draxox/codsoft_tasks)
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/20659da9-8b3c-4918-8784-ab6bbef2528d" autoplay loop controls="controls" width="100%"></video>
+</div>
+
+> 🎥 **Walkthrough Video**: [**Click here to Play / Download `docs/demo.mp4`**](https://github.com/Draxox/codsoft_tasks/raw/main/EduManage/docs/demo.mp4) (11.6 MB)
+
+> 💡 *A complete walkthrough showing the full operational lifecycle: Role-Based Access Control (RBAC) ➔ Admin overview & student enrollment ➔ 403 Forbidden security interception on student identity ➔ Faculty classroom roll call & examination score evaluation ➔ Student personalized report card & online fee clearance.*
+
+---
+
 ## 🌟 Key Features
 
 ### 👔 1. Institutional Administration Portal (`/`)
