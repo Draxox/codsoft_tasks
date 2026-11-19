@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  TEACHER
+  STUDENT
+}
+
+enum AttendanceStatus {
+  PRESENT
+  ABSENT
+  LATE
+}
+
+enum FeeStatus {
+  PAID
+  PENDING
+  OVERDUE
+}
+
+model Student {
+  id          String       @id @default(cuid())
+  rollNumber  String       @unique
+  name        String
+  email       String       @unique
+  gradeClass  String
+  parentPhone String
+  avatar      String?
+  attendances Attendance[]
+  grades      Grade[]
+  feeStatus   FeeStatus    @default(PENDING)
+  feeAmount   Float        @default(45000)
+  feePaidDate DateTime?
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+}
+
+model Teacher {
+  id         String   @id @default(cuid())
+  employeeId String   @unique
+  name       String
+  email      String   @unique
+  department String
+  phone      String
+  classes    String
+  avatar     String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Attendance {
+  id        String           @id @default(cuid())
+  studentId String
+  student   Student          @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  date      DateTime         @default(now())
+  status    AttendanceStatus @default(PRESENT)
+  remarks   String?
+}
+
+model Grade {
+  id            String   @id @default(cuid())
+  studentId     String
+  student       Student  @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  examTitle     String
+  subject       String
+  marksObtained Float
+  maxMarks      Float    @default(100)
+  letterGrade   String
+  createdAt     DateTime @default(now())
+}
