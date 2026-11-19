@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum JobType {
+  FULL_TIME
+  PART_TIME
+  CONTRACT
+  REMOTE
+}
+
+enum ExperienceLevel {
+  ENTRY_LEVEL
+  MID_LEVEL
+  SENIOR_LEVEL
+  LEAD
+}
+
+enum ApplicationStatus {
+  APPLIED
+  UNDER_REVIEW
+  INTERVIEW_SCHEDULED
+  OFFER_EXTENDED
+  REJECTED
+}
+
+model Company {
+  id        String   @id @default(cuid())
+  name      String
+  logo      String
+  website   String
+  location  String
+  jobs      Job[]
+  createdAt DateTime @default(now())
+}
+
+model Job {
+  id              String          @id @default(cuid())
+  title           String
+  companyId       String
+  company         Company         @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  category        String
+  jobType         JobType         @default(FULL_TIME)
+  experienceLevel ExperienceLevel @default(MID_LEVEL)
+  location        String
+  salaryMin       Int
+  salaryMax       Int
+  description     String
+  requirements    String
+  skills          String
+  isActive        Boolean         @default(true)
+  applications    Application[]
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+}
+
+model Application {
+  id             String            @id @default(cuid())
+  jobId          String
+  job            Job               @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  candidateName  String
+  candidateEmail String
+  candidatePhone String
+  linkedinUrl    String?
+  resumeName     String
+  coverLetter    String?
+  status         ApplicationStatus @default(APPLIED)
+  matchScore     Int               @default(85)
+  notes          String?
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+}

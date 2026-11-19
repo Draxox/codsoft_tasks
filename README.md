@@ -10,7 +10,7 @@ Repository containing all 3 projects completed for the **CodSoft Full Stack Web 
 | :---: | :--- | :--- | :--- | :---: | :---: |
 | **01** | [**DineDesk**](./DineDesk) | Modern Restaurant Ordering, Contactless QR, Table Reservations & Real-Time Kitchen Display System (KDS) | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL, Prisma ORM | [🎥 Walkthrough](./DineDesk/README.md#-live-demo-video-walkthrough) | ✅ **Completed** |
 | **02** | [**EduManage**](./EduManage) | Student Information System & Academic ERP (Attendance, Grades & Fees) | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL, Prisma ORM | [🎥 Walkthrough](./EduManage/README.md#-live-demo-video-walkthrough) | ✅ **Completed** |
-| **03** | *CareerHub (Job Portal)* | Modern Recruitment & Job Application Platform | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL | — | ⏳ **In Progress** |
+| **03** | [**CareerHub**](./CareerHub) | Modern Recruitment & Job Application Platform with ATS Candidate Pipeline | Next.js 15+, React 19, Tailwind CSS 4, PostgreSQL, Prisma ORM | [🎥 Walkthrough](./CareerHub/README.md#-live-demo-video-walkthrough) | ✅ **Completed** |
 
 ---
 
@@ -33,3 +33,15 @@ Repository containing all 3 projects completed for the **CodSoft Full Stack Web 
 - **Student & Parent Academic Portal**: Official examination report card, term attendance progress bar with eligibility warnings, and simulated 1-click tuition fee online clearance with verified receipts.
 
 > For detailed architecture, setup guide, and database schema, see [**EduManage README**](./EduManage/README.md).
+
+---
+
+## 💼 Task 3: CareerHub — Recruitment Platform & Candidate ATS
+- **🎥 Live Video Walkthrough**: [View in CareerHub README](./CareerHub/README.md#-live-demo-video-walkthrough)
+- **Candidate Job Discovery & Search**: Filter openings by role category, employment type (Remote, Hybrid, Full-time), salary range, and technical skills.
+- **1-Click Quick Apply**: Modal with candidate credentials, portfolio URL, custom note, and simulated file attachment preview.
+- **Live Candidate Pipeline Tracker**: Real-time 4-stage stepper (`Applied` ➔ `Under Review` ➔ `Interview Scheduled` ➔ `Offer Extended`).
+- **Recruiter ATS Pipeline Board**: Interactive 4-column Kanban board to review applicant dossiers and advance candidates with 1 click.
+- **Job Requisition Publisher**: Employer modal to publish live job requisitions with compensation ranges and required skills.
+
+> For detailed architecture, setup guide, and database schema, see [**CareerHub README**](./CareerHub/README.md).
