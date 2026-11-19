@@ -9,7 +9,10 @@
 ## 🎥 Live Demo Video Walkthrough
 
 [![GitHub Repository](https://img.shields.io/badge/GitHub-codsoft__tasks-181717?style=for-the-badge&logo=github)](https://github.com/Draxox/codsoft_tasks)
-[![Watch CareerHub Walkthrough Video](https://img.shields.io/badge/▶%EF%B8%8F_Click_to_Watch-CareerHub_Demo_Video_(MP4)-10b981?style=for-the-badge&logo=video)](https://github.com/Draxox/codsoft_tasks/raw/main/CareerHub/docs/demo.mp4)
+
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/457254a9-ad70-45c2-9f7c-5c6e380a969e" autoplay loop controls="controls" width="100%"></video>
+</div>
 
 > 🎥 **Walkthrough Video**: [**Click here to Play / Download `docs/demo.mp4`**](https://github.com/Draxox/codsoft_tasks/raw/main/CareerHub/docs/demo.mp4)
 
